@@ -1,0 +1,180 @@
+{
+  "tags": [],
+  "paths": {},
+  "definitions": {
+    "200": {
+      "type": "object",
+      "description": "OK",
+      "properties": {
+        "error": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "204": {
+      "type": "object",
+      "description": "No Content"
+    },
+    "400": {
+      "type": "object",
+      "description": "Bad Request",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/GenericError"
+        },
+        "data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "401": {
+      "type": "object",
+      "description": "Unauthorized",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/GenericError"
+        },
+        "data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "403": {
+      "type": "object",
+      "description": "Forbidden",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/GenericError"
+        },
+        "data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "404": {
+      "type": "object",
+      "description": "Not Found",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/GenericError"
+        },
+        "data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "409": {
+      "type": "object",
+      "description": "Conflict",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/GenericError"
+        },
+        "data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "500": {
+      "type": "object",
+      "description": "Internal Server Error",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/GenericError"
+        },
+        "data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "BaseModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "created_at"
+      ]
+    },
+    "GenericError": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 600
+        },
+        "trace": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "message",
+        "code"
+      ]
+    },
+    "200_bool": {
+      "type": "object",
+      "description": "OK",
+      "properties": {
+        "error": {
+          "type": "boolean",
+          "default": false
+        },
+        "data": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "default": {
+      "description": "B2C Authentication",
+      "flow": "application",
+      "tokenUrl": "TODO",
+      "scopes": {},
+      "type": "oauth2"
+    }
+  },
+  "info": {
+    "version": "1.0.0",
+    "contact": {
+      "name": "Development Team",
+      "email": "dev@example.com",
+      "url": "https://example.com"
+    },
+    "license": {
+      "name": "All Rights Reserved"
+    }
+  },
+  "host": "api.example.com",
+  "basePath": "/v1",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "swagger": "2.0"
+}

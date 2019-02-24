@@ -1,0 +1,22 @@
+{
+  "name": "openapi-crud-generator",
+  "version": "1.0.0",
+  "description": "CLI tool to scaffold openapi specifications for CRUD APIs which can then be extended",
+  "main": "cli.js",
+  "bin": {
+    "openapi-crud-generator": "cli.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "cli",
+    "openapi"
+  ],
+  "author": "Carl Evans",
+  "license": "MIT",
+  "dependencies": {
+    "inflection": "^1.12.0",
+    "inquirer": "^6.2.2"
+  }
+}
