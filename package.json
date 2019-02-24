@@ -1,6 +1,6 @@
 {
   "name": "openapi-crud-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to scaffold openapi specifications for CRUD APIs which can then be extended",
   "main": "cli.js",
   "bin": {
