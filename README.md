@@ -14,6 +14,8 @@ npm i -g openapi-crud-generator
 openapi-crud-generator [--print-template]
 ```
 
+If there is a file in the directory that you run this command in called `template.json`, the tool will use this instead of the built-in one. You can use the `--print-template` option to get a copy of the built-in template which you can then tweak and save as `template.json` to use custom base templates. Check `lib/buildTemplate.js` to see what properties are overridden / set by this tool.
+
 ### files
 
 - `cli.js` is the main CLI entrypoint
