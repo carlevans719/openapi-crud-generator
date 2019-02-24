@@ -9,6 +9,11 @@
   "directories": {
     "lib": "lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlevans719/openapi-crud-generator.git"
+  },
+  "homepage": "https://github.com/carlevans719/openapi-crud-generator#readme",
   "keywords": [
     "cli",
     "openapi"
